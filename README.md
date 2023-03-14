@@ -8,7 +8,7 @@
 ./non-fiction/OUP/Kauffman/ch1.txt
 ./non-fiction/OUP/Rybczynski/ch1.txt
 ```
-We check where is the file ```ch1.txt``` and find out there have five ```ch1.txt``` in written_2.
+We can find the path of the file ```ch1.txt``` by using this command and find out the path of five ```ch1.txt``` in written_2.
 ```
 [cs15lwi23agm@ieng6-202]:written_2:530$ find -iname boston-whereToGo.txt
 ./travel_guides/berlitz2/Boston-WhereToGo.txt
@@ -32,7 +32,7 @@ We can check where is the file by the name ```boston-whereToGo.txt``` here and i
 ./travel_guides/berlitz1
 ./travel_guides/berlitz2
 ```
-When we want to get the list of the whole directory, we can use the command ```find -type d``` to do it.
+When we want to get the list of the whole directory, we can use the command ```find -type d``` to do it. It is useful when we only want the list of the directory.
 ```
 [cs15lwi23agm@ieng6-202]:written_2:613$ find -type f
 ./non-fiction/OUP/Abernathy/ch1.txt
@@ -260,7 +260,7 @@ When we want to get the list of the whole directory, we can use the command ```f
 ./travel_guides/berlitz2/Vallarta-WhatToDo.txt
 ./travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
-When we want to find all the regular file, we can use the the command ```find -type f```. It help us save a lot of time to check each file name by open each directory.
+When we want to find all the regular files, we can use the the command ```find -type f```. It shows the list of all the regular files in written_2, which is useful when we only want the list of the directory.
 ## find -size
 
 ```
@@ -285,7 +285,7 @@ When we want to find all the regular file, we can use the the command ```find -t
 ./travel_guides/berlitz2/China-WhereToGo.txt
 ./travel_guides/berlitz2/Portugal-WhereToGo.txt
 ```
-We can find the file that is bigger than 80 kibibyte by using command ```find -size +80k```.
+We can find the file that is bigger than 80 kibibyte by using command ```find -size +80k```. It is useful for checking the size of the file. When we want clear the memory for some more extra space, we may choose to delete the bigger file first and we can use this command for finding the path of those files.
 ```
 [cs15lwi23agm@ieng6-202]:written_2:617$ find -size +80k -size -90k
 ./non-fiction/OUP/Kauffman/ch9.txt
@@ -296,7 +296,7 @@ We can find the file that is bigger than 80 kibibyte by using command ```find -s
 ./travel_guides/berlitz1/WhereToIstanbul.txt
 ./travel_guides/berlitz1/WhereToLakeDistrict.txt
 ```
-We can find the file that is bigger than 80 kibibyte but smaller than 90 kibibyte by using command ```find -size +80k -size -90k```. It is useful for checking the size of the file. When we want clear the memory for some more extra space, we may choose to delete the bigger file first and use this command for finding the path of those files.
+We can find the file that is bigger than 80 kibibyte but smaller than 90 kibibyte by using command ```find -size +80k -size -90k```.
 ## find -used
 ```
 [cs15lwi23agm@ieng6-202]:written_2:594$ find -used +0
@@ -346,7 +346,7 @@ We can find the file that is bigger than 80 kibibyte but smaller than 90 kibibyt
 ./non-fiction/OUP/Rybczynski/ch2.txt
 ./non-fiction/OUP/Rybczynski/ch3.txt
 ```
-We can find the files which are last accessed exactly one day after their status was last changed, which is useful when we want to check when we accessed the file after the last change time.
+We can find the files which are last accessed exactly one day after their status was last changed. It is useful when we want to check the specific time we accessed the file after the last change time.
 ```
 [cs15lwi23agm@ieng6-202]:written_2:591$ find -used 1
 ./non-fiction/OUP/Abernathy/ch1.txt
@@ -395,12 +395,13 @@ We can find the files which are last accessed exactly one day after their status
 ./non-fiction/OUP/Rybczynski/ch2.txt
 ./non-fiction/OUP/Rybczynski/ch3.txt
 ```
-We can find the files which are last accessed more than zero day( > 0 day -> 1 day,2 day,3 day...) after their status was last changed, which is useful when we want to check when we accessed the file after the last change time.
+We can find the files which are last accessed more than zero day( > 0 day => 1 day,2 day,3 day...) after their status was last changed, which is useful when we want to check the day we accessed the file after the last change time.
 
 
 ### Source
 I find this website when I use google to search "grep command"
 
 [https://www.tecmint.com/35-practical-examples-of-linux-find-command/](https://www.tecmint.com/35-practical-examples-of-linux-find-command/)
+
 [https://man7.org/linux/man-pages/man1/find.1.html](https://man7.org/linux/man-pages/man1/find.1.html)
 
