@@ -399,7 +399,7 @@ We can find the files which are last accessed more than zero day( > 0 day => 1 d
 
 
 ### Source
-I find this website when I use google to search "grep command"
+I find this website when I use google to search "find command"
 
 [https://www.tecmint.com/35-practical-examples-of-linux-find-command/](https://www.tecmint.com/35-practical-examples-of-linux-find-command/)
 
